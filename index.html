@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e9ecef; /* Cor de fundo mais suave */
+            color: #333;
+            text-align: center;
+            padding: 50px;
+            margin: 0;
+        }
+        .container {
+            background-color: #ffffff;
+            border-radius: 15px; /* Cantos mais arredondados */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra mais forte */
+            padding: 40px; /* Aumenta o espaçamento interno */
+            max-width: 400px;
+            margin: auto;
+            transition: transform 0.2s; 
+        }
+        .container:hover {
+            transform: translateY(-5px); 
+        }
+        input[type="text"], input[type="email"] {
+            width: calc(100% - 24px); /* Largura total menos padding */
+            padding: 12px; /* Aumenta o espaçamento interno */
+            margin: 12px 0; /* Ajusta a margem */
+            border: 2px solid #28a745; /* Borda colorida */
+            border-radius: 5px;
+            font-size: 16px; 
+            transition: border-color 0.3s; /* Transição suave para foco */
+            box-sizing: border-box; /* Inclui o padding na largura total */
+        }
+        input[type="text"]:focus, input[type="email"]:focus {
+            border-color: #218838; /* Muda a cor da borda ao focar */
+            outline: none; /* Remove contorno padrão */
+        }
+        input[type="submit"] {
+            padding: 12px 20px; 
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px; /* Aumenta o tamanho da fonte do botão */
+            transition: background-color 0.3s;
+            margin-top: 10px; /* Espaço acima do botão */
+        }
+        input[type="submit"]:hover {
+            background-color: #218838; 
+        }
+        h1 {
+            font-size: 28px; /* Aumenta o tamanho do título */
+            margin-bottom: 15px; /* Espaçamento inferior */
+        }
+        p {
+            font-size: 18px; /* Tamanho da fonte do parágrafo */
+            margin-bottom: 20px; /* Espaçamento inferior */
+        }
+        .no-break {
+            white-space: nowrap; /* Impede quebras de linha */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Seja um Afiliado da TEMU</h1>
+        <p>Preencha o formulário abaixo para receber seu <span class="no-break">e-book</span> e começar a ganhar uma renda extra!</p>
+        <form action="processa.php" method="POST">
+            <input type="text" name="nome" id="nome" placeholder="Seu Nome" autocomplete="name" required>
+            <input type="email" name="email" id="email" placeholder="Seu E-mail" autocomplete="email" required>
+            <input type="submit" value="Baixar E-book">
+        </form>
+    </div>
+</body>
+</html>
